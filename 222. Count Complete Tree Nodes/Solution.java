@@ -1,0 +1,13 @@
+class Solution {
+    int count=0;
+    public int countNodes(TreeNode root) {
+        traverse(root);
+        return count;
+    }
+    private void traverse(TreeNode root){
+        if(root==null) return;
+        count++;
+        traverse(root.left);
+        traverse(root.right);
+    }
+}
